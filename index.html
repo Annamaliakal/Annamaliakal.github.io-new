@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reservation Form</title>
+	<link rel="stylesheet" href="f.css">
+	 <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<div class="container">
+<body>	
+<div class="slider">
+	<div class="room">
+		<form id="reg">
+			<h1>Make Your Reservation</h1>
+			<label for="name"></label>
+		<input type="text" name="name" id="name" placeholder="Enter Full Name" required>
+		<label for="email"></label>
+		<input type="email" id="email" name="email" placeholder="Enter your email" required><br/><br/>
+		
+		<select id="f"><option>+91</option><option>+92</option><option>+93</option></select>
+		<label for="number"></label>
+		<input type="tel" id="number" name="number" placeholder="Phone" required><br/><br/>
+		
+			
+		<label for="rooms"></label>
+		<input type="number" name="rooms" id="rooms" placeholder="Rooms" min="1" max="5" required>
+		<label for="Guests"></label>
+		<input type="number" name="Guests" id="Guests" placeholder="Guests" min="1" max="5"><br/><br/>
+		<label for="cin"></label>		
+		<input type="date" name="input1" id="cin" placeholder="Check-in">
+		<label for="out"></label>
+		<input type="date" name="input2" id="out" placeholder="Check-out"><br/><br/>
+
+		<button type="submit" name="button" id="button">Book Now</button>
+		<br/>
+		</form>
+		<script>
+		var url ='https://jsonplaceholder.typicode.com/posts';
+		var data;
+
+		fetch(url, {
+  method: 'POST', 
+  body: JSON.stringify(data), 
+  headers:{
+    'Content-Type': 'application/json'
+}
+}).then(res => res.json())
+.then(response => console.log('Success:', JSON.stringify(response)))
+.catch(error => console.error('Error:', error));
+
+
+
+		</script>
+
+</div>
+</div></div>
+</body>
+</html>
